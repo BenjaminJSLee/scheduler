@@ -3,4 +3,14 @@ const getAppointmentsForDay = (state, day) => {
   const { appointments } = state.days.find((obj) => obj.name === day) || {appointments: []};
   return appointments.map((id) => state.appointments[id]);
 };
-export default getAppointmentsForDay;
+
+const getInterview = (state, interview) => {
+  if (!state.interviewers || !interview) return null;
+  const interviewer = state.interviewers[interview.interviewer] || null;
+  return interviewer && { student: interview.student, interviewer};
+};
+
+export {
+  getAppointmentsForDay, 
+  getInterview,
+};
