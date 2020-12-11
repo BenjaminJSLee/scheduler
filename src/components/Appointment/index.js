@@ -36,18 +36,18 @@ const Appointment = (props) => {
         transition(SHOW);
       })
       .catch((err) => {
-        transition(ERROR_SAVE);
+        transition(ERROR_SAVE, true);
       });
   };
 
   const remove = () => {
-    transition(DELETING);
+    transition(DELETING, true);
     props.cancelInterview(props.id)
       .then((res) => {
         transition(EMPTY);
       })
       .catch((err) => {
-        transition(ERROR_DELETE);
+        transition(ERROR_DELETE, true);
       });
   };
 
@@ -96,7 +96,7 @@ const Appointment = (props) => {
       { (mode === ERROR_SAVE || mode === ERROR_DELETE) && (
         <Error 
           message={ mode === ERROR_SAVE ? "Failed to save to database" : "Failed to delete from database"}
-          onClose={() => transition(SHOW)}
+          onClose={() => back()}
         />
       )}
 
