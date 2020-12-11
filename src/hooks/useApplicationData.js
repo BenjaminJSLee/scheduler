@@ -26,7 +26,7 @@ const useApplicationData = () => {
     .then((res) => {
       setState(prev => {
         const day = prev.days.find((day) => day.appointments.includes(id));
-        day.spots -= 1;
+        if (!prev.appointments[id].interview) day.spots -= 1;
         return {
           ...prev,
           appointments
