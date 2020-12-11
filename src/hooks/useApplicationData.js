@@ -24,10 +24,14 @@ const useApplicationData = () => {
       ...appointment,
     })
     .then((res) => {
-      setState(prev => ({
-        ...prev,
-        appointments
-      }));
+      setState(prev => {
+        const day = prev.days.find((day) => day.appointments.includes(id));
+        day.spots -= 1;
+        return {
+          ...prev,
+          appointments
+        }
+      });
     });
   };
 
@@ -42,10 +46,14 @@ const useApplicationData = () => {
     };
     return axios.delete(`/api/appointments/${id}`)
       .then((res) => {
-        setState(prev => ({
-          ...prev,
-          appointments
-        }));
+        setState(prev => {
+          const day = prev.days.find((day) => day.appointments.includes(id));
+          day.spots += 1;
+          return {
+            ...prev,
+            appointments
+          }
+        });
       });
       
   };
