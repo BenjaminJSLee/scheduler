@@ -14,7 +14,7 @@ ___
 ___
 ## Setup
 
-You'll have to start the scheduler-api server along with the database to actually receive any data when you start the application. Instructions onthe scheduler-api server can be found here: https://github.com/BenjaminJSLee/scheduler-api
+You'll have to start the scheduler-api server along with the database to actually receive any data when you start the application. Instructions on the scheduler-api server can be found here: https://github.com/BenjaminJSLee/scheduler-api
 
 Install dependencies with `npm install`.
 
