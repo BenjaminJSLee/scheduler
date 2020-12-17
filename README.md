@@ -4,13 +4,13 @@ Interview Scheduler is an app used to place appointments for interviews on all w
 [**Interview Scheduler**](https://frosty-colden-62906c.netlify.app/)
 ## Previews
 ___
-![Empty slots for appointments](https://github.com/BenjaminJSLee/scheduler/tree/master/docs/empty.png)
+![Empty slots for appointments](https://github.com/BenjaminJSLee/scheduler/blob/master/docs/empty.png?raw=true)
 ___
-![Create an appointment](https://github.com/BenjaminJSLee/scheduler/tree/master/docs/create.png)
+![Create an appointment](https://github.com/BenjaminJSLee/scheduler/blob/master/docs/create.png?raw=true)
 ___
-![Edit an appointment](https://github.com/BenjaminJSLee/scheduler/tree/master/docs/edit.png)
+![Edit an appointment](https://github.com/BenjaminJSLee/scheduler/blob/master/docs/edit.png?raw=true)
 ___
-![Delete an appointment (on a different day)](https://github.com/BenjaminJSLee/scheduler/tree/master/docs/empty.png)
+![Delete an appointment (on a different day)](https://github.com/BenjaminJSLee/scheduler/blob/master/docs/delete.png?raw=true)
 ___
 ## Setup
 
