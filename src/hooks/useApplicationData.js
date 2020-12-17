@@ -38,11 +38,11 @@ const useApplicationData = () => {
   };
 
   useEffect(() => {
-    // const ws = new WebSocket(process.env.REACT_APP_WEBSOCKET_URL);
-    // ws.onmessage = (evt) => {
-    //   const data = JSON.parse(evt.data);
-    //   dispatch(data);
-    // };
+    const ws = new WebSocket(process.env.REACT_APP_WEBSOCKET_URL);
+    ws.onmessage = (evt) => {
+      const data = JSON.parse(evt.data);
+      dispatch(data);
+    };
     Promise.all([
       axios.get(`/api/days`),
       axios.get(`/api/appointments`),
@@ -56,9 +56,9 @@ const useApplicationData = () => {
         interviewers: interviewers.data
       });
     });
-    // return () => {
-    //   ws.close();
-    // };
+    return () => {
+      ws.close();
+    };
   }, []);
 
   return { state, setDay, bookInterview, cancelInterview };
